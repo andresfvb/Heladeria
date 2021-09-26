@@ -1,0 +1,12 @@
+button{
+    margin-top: 10px ;
+}
+.card{
+    margin-top: 20px;
+}
+.row>*{
+    padding: 20px;
+}
+.card-header{
+    margin-bottom: 20px;
+}

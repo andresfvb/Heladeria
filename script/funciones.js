@@ -8,19 +8,23 @@ function registrarVentas(){
     numeroVentas = parseInt(document.getElementById("ventas").value);
     console.log("--------NUMERO DE VENTAS----------");
     console.log(numeroVentas);
-    ventas = [];
     $(document).on('click', '#registro', function() {
         $(".cliente").removeAttr("disabled");
     });
 }
 function ingresarVentas(){
+    var elemento = document.createElement("li");
     if (ventas.length < numeroVentas){
         let dato = parseInt(document.getElementById("cliente").value);
         ventas.push(dato);
-        console.log("----------CLIENTES---------");
-        console.log(ventas)
+        var contenido = document.createTextNode(dato);
+        elemento.appendChild(contenido);
+        document.getElementById("dinero-ingresado").appendChild(elemento);
     }else{
-        console.log("YA DIGITO TODOS LAS VENTAS")
+        var dato = "Ya digito todas las ventas"
+        var contenido = document.createTextNode(dato);
+        elemento.appendChild(contenido);
+        document.getElementById("dinero-ingresado").appendChild(elemento);
     }
     
     $(document).on('click', '#cliente', function() {
@@ -52,9 +56,18 @@ function regresarVueltos(){
         }
     }
     if (respuesta == numeroVentas){
+        var dato = "S - Si puede devolver cambio";
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode(dato);
+        elemento.appendChild(contenido);
+        document.getElementById("vueltos").appendChild(elemento);
         console.log("S");
     }else{
-        console.log("N")
+        var dato = "N - No puede devolver cambio";
+        var elemento = document.createElement("li");
+        var contenido = document.createTextNode(dato);
+        elemento.appendChild(contenido);
+        document.getElementById("vueltos").appendChild(elemento);
     }
 
 

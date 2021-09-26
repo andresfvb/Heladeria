@@ -8,7 +8,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            
+        <link rel="stylesheet" href="css/style.css">
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -18,32 +18,74 @@
 
     </head>
     <body>
-        <div class="row">
-            <div class="col-auto">
-                <input type="text" class="form-control" name="cantidad_ventas" id="ventas">
-            </div>
-            <div class="col-auto">
-                <button type="button" id="registro" class="btn btn-primary" onclick="registrarVentas()">Registrar Venta</button>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-auto">
-                <input type="text" class="form-control" name="moneda_cliente" id="cliente">
-            </div>
-            <div class="col-auto">
-                <button type="button" id="cliente" class="btn btn-primary cliente" onclick="ingresarVentas()" disabled>Ingresar</button>
+        <div class="header container-fluid shadow bg-white">
+            <div class="row">
+                <div class="col-md-12 text-center page-header">
+                    <h1><a href="#" class="fw-bold text-uppercase text-base border-white ">Heladeria</a></h1>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-auto">
-                <button type="button" id="cambio" class="btn btn-primary verificar" onclick=" regresarVueltos()" disabled>Verificar cambios</button>
+        <div class="container card" style="width:75%">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-header">Cantidad de ventas</h5>
+                                    <input type="text" class="form-control" name="cantidad_ventas" id="ventas">
+                                    <button type="button" id="registro" class="btn btn-primary" onclick="registrarVentas()">Registrar Venta</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-header">Ingresar pago</h5>
+                                    <input type="text" class="form-control" name="moneda_cliente" id="cliente">
+                                    <button type="button" id="cliente" class="btn btn-primary cliente" onclick="ingresarVentas()" disabled>Ingresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-header">Verificar vueltos</h5>
+                                    <button type="button" id="cambio" class="btn btn-primary verificar" onclick=" regresarVueltos()" disabled>Verificar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-header">Dinero ingresado</h5>
+                                    <div id="dinero-ingresado">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-header">Vueltos</h5>
+                                    <div id="vueltos">
+    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                     
+                    </div>
+                    
+                </div>
             </div>
-        </div>
-        
-        
-        
+            
+        </div>       
     </body>
-    <script>
-        
-    </script>
 </html>
